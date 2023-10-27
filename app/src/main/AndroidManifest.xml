@@ -24,15 +24,21 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/Theme.TaskManager"
+            android:theme="@style/Theme.TaskManager.NoActionBar"
             />
         <activity
             android:name=".ForgetPassActivity"
-            android:theme="@style/Theme.TaskManager"
+            android:theme="@style/Theme.TaskManager.NoActionBar"
             />
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.TaskManager.NoActionBar"/>
+        <activity
+            android:name=".AddToDoActivity"
+            android:theme="@style/Theme.TaskManager"/>
+        <activity
+            android:name=".Categories"
+            android:theme="@style/Theme.TaskManager"/>
     </application>
 
 </manifest>

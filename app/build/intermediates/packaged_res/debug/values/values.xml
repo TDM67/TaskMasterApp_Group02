@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="cat1">#9769EA</color>
+    <color name="cat2">#6988BD</color>
+    <color name="cat3">#AB69BD</color>
+    <color name="cat4">#EFCA93</color>
+    <color name="cat5">#69BABD</color>
     <color name="colorAccent">#FF03DAC5</color>
     <color name="colorTextDefault">#000</color>
     <color name="colorTextError">#AA0000</color>

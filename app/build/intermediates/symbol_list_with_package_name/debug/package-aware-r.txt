@@ -1411,6 +1411,11 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color cat1
+color cat2
+color cat3
+color cat4
+color cat5
 color colorAccent
 color colorTextDefault
 color colorTextError
@@ -3180,6 +3185,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_clear
 id action_container
 id action_context_bar
 id action_delete
@@ -3191,6 +3197,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_rename
 id action_settings
 id action_sync
 id action_text
@@ -3235,6 +3242,7 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
+id categoryRecycle
 id center
 id centerCrop
 id centerInside
@@ -3247,7 +3255,6 @@ id checkbox
 id checked
 id chronometer
 id circle_center
-id clAddTodo
 id clLogin
 id clOverview
 id clear_text
@@ -3642,6 +3649,7 @@ id tvAddDescriptionLabel
 id tvAddExpiryTitle
 id tvAddTimeTitle
 id tvAddTitleLabel
+id tvCount
 id tvCreateAccount
 id tvDate
 id tvForgetPass
@@ -3649,7 +3657,6 @@ id tvLogin
 id tvLoginEmailLabel
 id tvLoginPasswordLabel
 id tvTitle
-id tvTtl
 id tvUserName
 id unchecked
 id uniform
@@ -3793,8 +3800,10 @@ layout activity_forgetpass
 layout activity_login
 layout activity_main
 layout activity_register
-layout add_popup
+layout add_todo_activity
 layout app_bar_main
+layout categories_activity
+layout category_item
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3880,6 +3889,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout todo_item
 menu activity_main_drawer
+menu cat_menu
 menu item_menu
 menu main
 mipmap ic_launcher
