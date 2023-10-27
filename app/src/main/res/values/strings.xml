@@ -1,3 +1,63 @@
 <resources>
-    <string name="app_name">TaskMasterApplication_Group02</string>
+    <string name="app_name">TaskManager</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_categories">Categories</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Logout</string>
+
+
+    <string name="default_todo_title">DefaultTodoTitle</string>
+    <string name="default_todo_date">DefaultTodoDate</string>
+    <string name="default_todo_description">DefaultTodoDescription</string>
+    <string name="date_icon_description">Icon for date information.</string>
+    <string name="edit_icon_description">Icon for editing the todo.</string>
+    <string name="favourite_icon_description">Icon of heart. Describes if todo is a favourite.</string>
+    <string name="done_icon_description">Icon of circles. Describes if todo is a done.</string>
+    <string name="delete_icon_name">Delete</string>
+    <string name="default_contacts_title">Linked contacts</string>
+    <string name="default_no_contacts_title">No linked contacts</string>
+
+    <string name="add_button">Add todo</string>
+    <string name="save_button">Save changes</string>
+    <string name="add_contacts_button">Add contacts</string>
+    <string name="add_contacts_button_description">Plus icon for linking mere contacts with todo.</string>
+    <string name="title_label">Title</string>
+    <string name="expiry_label">Date</string>
+    <string name="time_label">Time</string>
+    <string name="description_label">Description</string>
+    <string name="done_label">Is done?</string>
+    <string name="favourite_label">Is favourite?</string>
+    <string name="default_contact_name">DefaultContactName</string>
+    <string name="default_contact_telephone">DefaultContactTelephone</string>
+    <string name="default_contact_email">DefaultContactEmail</string>
+    <string name="delete_contact_icon_description">Delete</string>
+    <string name="send_email_contact_icon_description">Icon of an email. Shares todo with contact.</string>
+    <string name="send_sms_contact_icon_description">Icon of an message. Shares todo with contact.</string>
+    <string name="phone_contact_icon_description">Icon of phone</string>
+    <string name="email_contact_icon_description">Icon of email</string>
+    <string name="picture_description">Profile picture of user.</string>
+    <string name="default_time">00:00</string>
+
+    // Menu
+    <string name="menu_date">Sort by date</string>
+    <string name="menu_favourites">Sort by favourites</string>
+    <string name="title_activity_login">Sign in</string>
+
+    // Login
+    <string name="login_title">Login</string>
+    <string name="login_email">Email</string>
+    <string name="register_username">User Name</string>
+    <string name="login_password">Password</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="button_forget_pas">Forgot Password?</string>
+    <string name="button_sign_up">Create Account</string>
+    <string name="error_info">Wrong username or password!</string>
 </resources>
