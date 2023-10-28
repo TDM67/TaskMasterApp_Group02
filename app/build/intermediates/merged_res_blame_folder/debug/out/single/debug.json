@@ -16,12 +16,12 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_settings_activity.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/settings_activity.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_fragment_categories.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_categories.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -72,6 +72,10 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/side_nav_bar.xml"
     },
     {
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/drawable_baseline_delete_24.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/baseline_delete_24.xml"
+    },
+    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/menu_item_menu.xml.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/menu/item_menu.xml"
     },
@@ -84,8 +88,8 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_home.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_fragment_notifications.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_notifications.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_notification_item.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/notification_item.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/drawable_ic_launcher_background.xml.flat",
@@ -100,16 +104,16 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/ic_menu_camera.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/navigation_mobile_navigation.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/navigation/mobile_navigation.xml"
-    },
-    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/drawable_baseline_notifications_24.xml.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/baseline_notifications_24.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_activity_login.xml.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.taskmanager.app-merged_res-44:/layout_settings_activity.xml.flat",
+        "source": "com.example.taskmanager.app-main-46:/layout/settings_activity.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/menu_activity_main_drawer.xml.flat",
@@ -128,12 +132,12 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/ic_menu_slideshow.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-hdpi/ic_launcher_foreground.webp"
-    },
-    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_activity_main.xml.flat",
@@ -160,10 +164,6 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/app_bar_main.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_fragment_settings.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_settings.xml"
-    },
-    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
@@ -176,20 +176,24 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_activity_register.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_register.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_notifications_activity.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/notifications_activity.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_todo_item.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/todo_item.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_activity_register.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_register.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/drawable_baseline_add_24.xml.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/drawable/baseline_add_24.xml"
     },
     {
-        "merged": "com.example.taskmanager.app-merged_res-44:/menu_cat_menu.xml.flat",
-        "source": "com.example.taskmanager.app-main-46:/menu/cat_menu.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_todo_item.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/todo_item.xml"
+    },
+    {
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/menu_cat_menu.xml.flat",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/menu/cat_menu.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -222,9 +226,5 @@
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/mipmap-xxxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-merged_res-44:/layout_add_popup.xml.flat",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/add_popup.xml"
     }
 ]

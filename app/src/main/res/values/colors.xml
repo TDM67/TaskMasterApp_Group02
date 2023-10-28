@@ -29,5 +29,9 @@
     <color name="cat4">#EFCA93</color>
     <color name="cat5">#69BABD</color>
 
+    <color name="high">#E35E5E</color>
+    <color name="normal">#FFC107</color>
+    <color name="low">#8BC34A</color>
+
 
 </resources>

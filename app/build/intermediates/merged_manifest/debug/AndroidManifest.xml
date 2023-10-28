@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.TaskManager" >
         <activity
-            android:name="com.example.taskmanager.MainActivity"
+            android:name="com.example.taskmanager.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TaskManager.NoActionBar" >
@@ -45,13 +45,19 @@
             android:name="com.example.taskmanager.ForgetPassActivity"
             android:theme="@style/Theme.TaskManager.NoActionBar" />
         <activity
-            android:name="com.example.taskmanager.LoginActivity"
+            android:name="com.example.taskmanager.activities.MainActivity"
             android:theme="@style/Theme.TaskManager.NoActionBar" />
         <activity
-            android:name="com.example.taskmanager.AddToDoActivity"
+            android:name="com.example.taskmanager.activities.AddToDoActivity"
             android:theme="@style/Theme.TaskManager" />
         <activity
-            android:name="com.example.taskmanager.Categories"
+            android:name="com.example.taskmanager.activities.CategoriesActivity"
+            android:theme="@style/Theme.TaskManager" />
+        <activity
+            android:name="com.example.taskmanager.activities.NotificationsActivity"
+            android:theme="@style/Theme.TaskManager" />
+        <activity
+            android:name="com.example.taskmanager.activities.SettingsActivity"
             android:theme="@style/Theme.TaskManager" />
 
         <provider

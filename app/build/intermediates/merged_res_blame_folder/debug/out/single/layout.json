@@ -12,16 +12,16 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_login.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/add_popup.xml",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/add_popup.xml"
-    },
-    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/activity_register.xml",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_register.xml"
     },
     {
-        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/category_item.xml",
-        "source": "com.example.taskmanager.app-main-46:/layout/category_item.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/notifications_activity.xml",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/notifications_activity.xml"
+    },
+    {
+        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/settings_activity.xml",
+        "source": "com.example.taskmanager.app-main-46:/layout/settings_activity.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_home.xml",
@@ -32,8 +32,8 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/nav_header_main.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_settings.xml",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_settings.xml"
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/settings_activity.xml",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/settings_activity.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/categories_activity.xml",
@@ -44,16 +44,8 @@
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/content_main.xml"
     },
     {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_notifications.xml",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_notifications.xml"
-    },
-    {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/activity_main.xml",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/activity_main.xml"
-    },
-    {
-        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_categories.xml",
-        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/fragment_categories.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/activity_forgetpass.xml",
@@ -62,6 +54,10 @@
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/todo_item.xml",
         "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/todo_item.xml"
+    },
+    {
+        "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/notification_item.xml",
+        "source": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-main-46:/layout/notification_item.xml"
     },
     {
         "merged": "/Users/strikerkv/.gradle/daemon/8.0/com.example.taskmanager.app-mergeDebugResources-43:/layout/add_todo_activity.xml",

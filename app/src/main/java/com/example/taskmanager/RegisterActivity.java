@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.taskmanager.activities.MainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RegisterActivity extends AppCompatActivity {

@@ -1,11 +1,7 @@
 package com.example.taskmanager;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.taskmanager.activities.MainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 public class LoginActivity extends AppCompatActivity {
@@ -47,11 +44,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void proceedLogin(String email, String password, View view){
         if(isValidEmailAddress() && isValidPassword()){
-            if(email.equals("user@gmail.com") && password.equals("123456"))
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            else
-                Snackbar.make(view, "Invalid credentials!", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             pbLogin.setVisibility(View.GONE);
         }
     }
