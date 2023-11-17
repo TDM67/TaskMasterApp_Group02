@@ -82,7 +82,7 @@ public class CategoriesActivity extends AppCompatActivity  {
                 }
                 else{
                     category = new Category();
-//                    //store category
+                    //  store category
                     category.setName(etCategoryName.getText().toString());
                     category.setCount(0);
                     category.setColor("#4287f5");
@@ -97,12 +97,11 @@ public class CategoriesActivity extends AppCompatActivity  {
                 }
             });
         });
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            this.finish();
+            startActivity(new Intent(this, MainActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

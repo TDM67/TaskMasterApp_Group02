@@ -40,10 +40,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         if (savedInstanceState == null) {
+            HomeFragment myFrag = new HomeFragment();
+
+            Intent intent = getIntent();
+            if (null != intent) {
+                //Null Checking
+                int id = intent.getIntExtra("cat_id",0);
+                Bundle bundle = new Bundle();
+                if (id != 0){
+                    bundle.putInt("cat_id", id);
+                    myFrag.setArguments(bundle);
+                }
+            }
+
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,
-                    new HomeFragment()).commit();
+                    myFrag).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+
     }
 
     @Override

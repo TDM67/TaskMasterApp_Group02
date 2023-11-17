@@ -31,6 +31,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class AddToDoActivity extends AppCompatActivity  {
     Button bAddTodo;
@@ -47,15 +48,6 @@ public class AddToDoActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_todo_activity);
-
-        Intent intent = getIntent();
-        if (null != intent) {
-            //Null Checking
-            todo_id = intent.getIntExtra("id",0);
-            if (todo_id != 0)
-                getTodo(todo_id);
-        }
-
         expiry = Calendar.getInstance(Locale.CANADA);
         todo = new Todo();
         todo.setExpiry(expiry.getTimeInMillis());
@@ -74,8 +66,10 @@ public class AddToDoActivity extends AppCompatActivity  {
                     android.R.layout.simple_list_item_1, categoryList);
             adp1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spCategories.setAdapter(adp1);
-        }else
+        }else{
             Toast.makeText(this, "Kindly, add a category!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), CategoriesActivity.class));
+        }
 
         bAddTodo.setOnClickListener(view->{
             loadTodoTime();
@@ -87,17 +81,31 @@ public class AddToDoActivity extends AppCompatActivity  {
             todo.setDone(false);
             todo.setFavourite(sAddFavourite.isChecked());
             todo.setExpiry(expiry.getTimeInMillis());
+            boolean dbInsertionSucceeded;
 
-            boolean dbInsertionSucceeded = db.insertTodo(todo);
-            if(dbInsertionSucceeded)
-                Toast.makeText(this, "Task added!", Toast.LENGTH_SHORT).show();
+            if(todo_id != 0 )
+                dbInsertionSucceeded = db.updateTodo(todo);
             else
-                Toast.makeText(this, "Failed to add!", Toast.LENGTH_SHORT).show();
+                dbInsertionSucceeded = db.insertTodo(todo);
+
+            if(dbInsertionSucceeded)
+                Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(this, "Failed!", Toast.LENGTH_SHORT).show();
 
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
+
         getSupportActionBar().setTitle("Add new task");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent intent = getIntent();
+        if (null != intent) {
+            //Null Checking
+            todo_id = intent.getIntExtra("todo_id",0);
+            if (todo_id != 0)
+                getTodo(todo_id);
+        }
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -165,12 +173,18 @@ public class AddToDoActivity extends AppCompatActivity  {
     }
 
     public void getTodo(int id){
-        Todo todo1 = db.getTodoById(id);
-        etAddTitle.setText(todo1.getName());
-        etAddDescription.setText(todo1.getDescription());
-        etAddTime.setText(todo1.getExpiry()+"");
-        etAddTitle.setText(todo1.getName());
-        cvAddExpiryDate.setDate(todo1.getExpiry());
-    }
+        todo = db.getTodoById(id);
+        etAddTitle.setText(todo.getName());
+        etAddDescription.setText(todo.getDescription());
+        String time = new SimpleDateFormat("HH:MM").format(new Date(todo.getCreated()));
+        etAddTime.setText(time);
+        etAddTitle.setText(todo.getName());
+        cvAddExpiryDate.setDate(todo.getExpiry());
+        sAddFavourite.setChecked(todo.getFavourite());
 
+        for (int i =0; i<categoryList.size(); i++) {
+            if(categoryList.get(i).equals(todo.getCategory()))
+                spCategories.setSelection(i);
+        }
+    }
 }

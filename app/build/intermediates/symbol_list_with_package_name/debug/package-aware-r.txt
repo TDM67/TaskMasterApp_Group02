@@ -3015,6 +3015,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_add_24
 drawable baseline_delete_24
+drawable baseline_done_all_24
 drawable baseline_event_note_24
 drawable baseline_format_list_bulleted_24
 drawable baseline_home_24
@@ -3309,6 +3310,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id done
 id dragAnticlockwise
 id dragClockwise
 id dragDown

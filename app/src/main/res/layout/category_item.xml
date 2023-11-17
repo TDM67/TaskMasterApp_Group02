@@ -10,6 +10,7 @@
     app:cardCornerRadius="15dp"
     android:layout_margin="7dp"
     tools:ignore="MissingConstraints"
+    android:clickable="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +20,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:id="@+id/layout"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         android:padding="7dp"
         android:orientation="horizontal">
         <TextView

@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskmanager.R;
 import com.example.taskmanager.activities.AddToDoActivity;
+import com.example.taskmanager.activities.MainActivity;
+import com.example.taskmanager.helpers.LocalDBHelper;
 import com.example.taskmanager.models.Todo;
 
 import java.text.SimpleDateFormat;
@@ -28,6 +30,7 @@ import java.util.List;
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyList> {
     List<Todo> list = Collections.emptyList();
     Context mContext;
+    
     public MyListAdapter(List<Todo> list, Context context){
         this.list = list;
         this.mContext = context;
@@ -53,27 +56,45 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyList> {
         holder.tvTitle.setPadding(10, 0, 10, 0);
         String dateString = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS").format(new Date(todo.getCreated()));
         holder.tvDate.setText(dateString);
-
-        holder.more.setOnClickListener(view->{
-            openOptionMenu(view, todo.getId());
-        });
+        if(todo.getDone())
+            holder.done.setVisibility(View.VISIBLE);
+        else
+            holder.done.setVisibility(View.GONE);
+        holder.more.setOnClickListener(view-> openOptionMenu(view, todo));
     }
-    public void openOptionMenu(View v, int id){
+    public void openOptionMenu(View v, Todo todo){
         PopupMenu popup = new PopupMenu(v.getContext(), v);
         popup.getMenuInflater().inflate(R.menu.item_menu, popup.getMenu());
+
+        if(todo.getDone()){
+            popup.getMenu().getItem(0).setVisible(false);
+            popup.getMenu().getItem(1).setVisible(false);
+        }
+
         popup.setOnMenuItemClickListener(item -> {
+            LocalDBHelper db = new LocalDBHelper(mContext);
+
             if(item.getTitle().equals("Edit")){
                 Intent intent=new Intent(mContext, AddToDoActivity.class);
-                intent.putExtra("todo_id",id);
+                intent.putExtra("todo_id",todo.getId());
                 mContext.startActivity(intent);
             }
             else if(item.getTitle().equals("Completed")){
+                //update status to completed || (done = true)
+                todo.setDone(true);
+
+                if(db.updateTodo(todo)) Toast.makeText(mContext, "Updated!", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(mContext, "Failed!", Toast.LENGTH_SHORT).show();
 
             }
             else if(item.getTitle().equals("Delete")){
-
+                //delete the todo using id
+                if(db.deleteTodo(todo.getId())) {
+                    Toast.makeText(mContext, "deleted!", Toast.LENGTH_SHORT).show();
+                    mContext.startActivity(new Intent(mContext, MainActivity.class));
+                }
+                else    Toast.makeText(mContext, "failed!", Toast.LENGTH_SHORT).show();
             }
-//            else  Toast.makeText(mContext, "You selected the action : " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         });
         popup.show();
@@ -84,12 +105,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyList> {
     }
     static class MyList extends RecyclerView.ViewHolder{
         TextView tvTitle,tvDate;
-        ImageView more;
+        ImageView more, done;
         public MyList(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvDate = itemView.findViewById(R.id.tvDate);
             more = itemView.findViewById(R.id.more);
+            done = itemView.findViewById(R.id.done);
         }
     }
 }
