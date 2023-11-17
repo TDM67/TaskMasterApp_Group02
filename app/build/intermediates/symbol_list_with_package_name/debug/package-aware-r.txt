@@ -3127,6 +3127,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable primary_button
+drawable primary_dark_button
 drawable side_nav_bar
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3190,6 +3192,7 @@ id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
 id action_clear
+id action_completed
 id action_container
 id action_context_bar
 id action_delete
@@ -3203,7 +3206,6 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_rename
 id action_settings
-id action_sync
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3241,6 +3243,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btAdd
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3259,12 +3262,14 @@ id checkbox
 id checked
 id chronometer
 id circle_center
+id clAddTodo
 id clLogin
 id clOverview
 id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
+id close_text
 id closest
 id collapseActionView
 id compress
@@ -3329,6 +3334,7 @@ id enterAlwaysCollapsed
 id etAddDescription
 id etAddTime
 id etAddTitle
+id etCategoryName
 id etLoginEmail
 id etLoginPassword
 id etRegister
@@ -3337,6 +3343,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id fabAdd
 id fade
 id fill
 id fill_horizontal
@@ -3426,6 +3433,7 @@ id matrix
 id message
 id middle
 id mini
+id mobile_navigation
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3578,6 +3586,7 @@ id snackbar_text
 id snap
 id snapMargins
 id south
+id spCategories
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3653,14 +3662,17 @@ id tvAddDescriptionLabel
 id tvAddExpiryTitle
 id tvAddTimeTitle
 id tvAddTitleLabel
+id tvCardTitle
 id tvCount
 id tvCreateAccount
 id tvDate
+id tvEmpty
 id tvForgetPass
 id tvLogin
 id tvLoginEmailLabel
 id tvLoginPasswordLabel
 id tvTitle
+id tvTtl
 id tvUserName
 id unchecked
 id uniform
@@ -3805,6 +3817,8 @@ layout activity_forgetpass
 layout activity_login
 layout activity_main
 layout activity_register
+layout add_category
+layout add_popup
 layout add_todo_activity
 layout app_bar_main
 layout categories_activity
@@ -3826,7 +3840,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_categories
 layout fragment_home
+layout fragment_notifications
+layout fragment_settings
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3900,6 +3917,7 @@ menu main
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+navigation mobile_navigation
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

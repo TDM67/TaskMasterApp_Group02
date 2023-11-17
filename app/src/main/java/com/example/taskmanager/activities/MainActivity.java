@@ -34,12 +34,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         navigationView.setNavigationItemSelectedListener(this);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, binding.appBarMain.toolbar, R.string.nav_header_title,
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,
+                binding.appBarMain.toolbar, R.string.nav_header_title,
                 R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,
+                    new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(this, NotificationsActivity.class));
         else if(item.getItemId() == R.id.nav_logout)
             startActivity(new Intent(this, LoginActivity.class));
-
         drawer.close();
         return true;
     }

@@ -4,7 +4,7 @@
             "outputFile": "com.example.taskmanager.app-mergeDebugResources-42:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/strikerkv/Documents/Android Studio/TaskManager/app/src/main/res/values-w1240dp/dimens.xml",
+                    "source": "C:\\Users\\s560727\\OneDrive - nwmissouri.edu\\Desktop\\Project\\TaskMasterApp_Group02\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

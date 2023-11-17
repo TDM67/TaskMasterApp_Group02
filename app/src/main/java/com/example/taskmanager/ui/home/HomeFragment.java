@@ -1,10 +1,12 @@
 package com.example.taskmanager.ui.home;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,8 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskmanager.R;
+import com.example.taskmanager.activities.MainActivity;
 import com.example.taskmanager.adapter.MyListAdapter;
 import com.example.taskmanager.databinding.FragmentHomeBinding;
+import com.example.taskmanager.helpers.LocalDBHelper;
 import com.example.taskmanager.models.Todo;
 
 import java.util.ArrayList;
@@ -26,20 +30,26 @@ public class HomeFragment extends Fragment {
     MyListAdapter myListAdapter;
     List<Todo> todoList = new ArrayList<>();
     private FragmentHomeBinding binding;
+    TextView tvEmpty;
+    Context mContext;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        long millis = new Date().getTime();
-
-        todoList.add(new Todo(1,"Todo 1","wake up early","Fav", millis,millis + 72000,true,true));
-        todoList.add(new Todo(2,"Todo 2","goto airport and pickup James","Fav", millis,millis + 72000,true,true));
-        todoList.add(new Todo(3,"Todo 3","read social science","Fav", millis,millis + 72000,true,true));
-        todoList.add(new Todo(4,"Todo 4","dinner with Alix","Fav", millis,millis + 72000,true,true));
-        myListAdapter = new MyListAdapter(todoList, getContext());
-        binding.rvOverview.setAdapter(myListAdapter);
-        binding.rvOverview.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+        mContext= container.getContext();
+        LocalDBHelper db = new LocalDBHelper(mContext);
+        todoList = db.getAllTodos();
+        if(todoList.size() > 0) {
+            binding.rvOverview.setVisibility(View.VISIBLE);
+            binding.tvEmpty.setVisibility(View.GONE);
+            myListAdapter = new MyListAdapter(todoList, getContext());
+            binding.rvOverview.setAdapter(myListAdapter);
+            binding.rvOverview.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+        }else{
+            binding.rvOverview.setVisibility(View.GONE);
+            binding.tvEmpty.setVisibility(View.VISIBLE);
+        }
         return root;
     }
 

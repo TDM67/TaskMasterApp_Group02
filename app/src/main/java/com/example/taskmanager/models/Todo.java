@@ -1,7 +1,10 @@
 package com.example.taskmanager.models;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+
 import java.io.Serializable;
-import java.util.List;
+import com.example.taskmanager.helpers.LocalDBHelper;
 
 public class Todo implements Serializable {
     private int id;
@@ -27,6 +30,19 @@ public class Todo implements Serializable {
         this.done = done;
         this.favourite = favourite;
     }
+
+    public static Todo createFrom(Cursor cursorTodo) {
+        int id = cursorTodo.getInt(0);
+        String name = cursorTodo.getString(1);
+        String description = cursorTodo.getString(2);
+        String category = cursorTodo.getString(3);
+        Long created = cursorTodo.getLong(4);
+        Long expiry = cursorTodo.getLong(5);
+        Boolean done = cursorTodo.getInt(6) != 0;
+        Boolean favourite = cursorTodo.getInt(7) != 0;
+        return new Todo(id, name, description, category, created, expiry, done, favourite);
+    }
+
 
     public String getCategory() {
         return category;
@@ -90,5 +106,26 @@ public class Todo implements Serializable {
 
     public void setFavourite(Boolean favourite) {
         this.favourite = favourite;
+    }
+
+    public ContentValues toContentValues() {
+        ContentValues cv = new ContentValues();
+        if (id != 0) {
+            cv.put(LocalDBHelper.COL_TODO_ID, id);
+        }
+        cv.put(LocalDBHelper.COL_TODO_NAME, name);
+        cv.put(LocalDBHelper.COL_TODO_DESCRIPTION, description);
+        cv.put(LocalDBHelper.COL_TODO_CATEGORY, category);
+        cv.put(LocalDBHelper.COL_TODO_CREATED, created);
+        cv.put(LocalDBHelper.COL_TODO_EXPIRY, expiry);
+        cv.put(LocalDBHelper.COL_TODO_DONE, done ? true : false);
+        cv.put(LocalDBHelper.COL_TODO_FAVOURITE, favourite ? true : false);
+        return cv;
+    }
+
+    @Override
+    public String toString() {
+        return "Todo {id = " + id + ", name = " + name + ", description = " + description + ", category = "+category+
+                ", "+created+", expiry = " + expiry + ", done = " + done + ", favourite = " + favourite;
     }
 }

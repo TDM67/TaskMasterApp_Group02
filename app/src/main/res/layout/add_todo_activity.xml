@@ -32,6 +32,17 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Category" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/spCategories"/>
         <TextView
             android:id="@+id/tvAddExpiryTitle"
             android:layout_width="wrap_content"

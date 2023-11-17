@@ -18,7 +18,9 @@ import com.example.taskmanager.R;
 import com.example.taskmanager.models.Category;
 import com.example.taskmanager.models.Todo;
 
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class MyCategoriesAdapter extends RecyclerView.Adapter<MyCategoriesAdapter.MyList> {
@@ -43,15 +45,13 @@ public class MyCategoriesAdapter extends RecyclerView.Adapter<MyCategoriesAdapte
         holder.tvCount.setText(category.getCount()+"");
         holder.layout.setBackgroundColor(Color.parseColor(category.getColor()));
 
-        holder.more.setOnClickListener(view->{
-            openOptionMenu(view);
-        });
+        holder.more.setOnClickListener(view-> openOptionMenu(view));
     }
     public void openOptionMenu(View v){
         PopupMenu popup = new PopupMenu(v.getContext(), v);
         popup.getMenuInflater().inflate(R.menu.cat_menu, popup.getMenu());
         popup.setOnMenuItemClickListener(item -> {
-            Toast.makeText(mContext, "You selected the action : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "id:"+item.getItemId()+" You selected the action : " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         });
         popup.show();

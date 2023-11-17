@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.TaskManager" >
         <activity
-            android:name="com.example.taskmanager.LoginActivity"
+            android:name="com.example.taskmanager.activities.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TaskManager.NoActionBar" >
@@ -45,7 +45,7 @@
             android:name="com.example.taskmanager.ForgetPassActivity"
             android:theme="@style/Theme.TaskManager.NoActionBar" />
         <activity
-            android:name="com.example.taskmanager.activities.MainActivity"
+            android:name="com.example.taskmanager.LoginActivity"
             android:theme="@style/Theme.TaskManager.NoActionBar" />
         <activity
             android:name="com.example.taskmanager.activities.AddToDoActivity"
@@ -81,6 +81,11 @@
         <uses-library
             android:name="androidx.window.sidecar"
             android:required="false" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.taskmanager.com.squareup.picasso"
+            android:exported="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

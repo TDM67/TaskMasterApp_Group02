@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="25dp"
+        android:padding="15dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/tvCardTitle"
+                android:textColor="@color/primary_dark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="ADD CATEGORY"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorTodoTitleDone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:text="Category Name :"
+            />
+
+        <EditText
+            android:id="@+id/etCategoryName"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="46dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:hint="eg: Alexander"
+            android:inputType="text"
+            android:textAllCaps="true"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/add_button"
+            android:background="@color/primary"
+            android:textColor="@color/cardview_light_background"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/close_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:gravity="center"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

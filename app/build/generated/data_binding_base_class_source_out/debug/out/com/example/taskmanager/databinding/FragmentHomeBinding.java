@@ -4,6 +4,7 @@ package com.example.taskmanager.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,10 +23,14 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvOverview;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView rvOverview) {
+  @NonNull
+  public final TextView tvEmpty;
+
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView rvOverview,
+      @NonNull TextView tvEmpty) {
     this.rootView = rootView;
     this.rvOverview = rvOverview;
+    this.tvEmpty = tvEmpty;
   }
 
   @Override
@@ -61,7 +66,13 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, rvOverview);
+      id = R.id.tvEmpty;
+      TextView tvEmpty = ViewBindings.findChildViewById(rootView, id);
+      if (tvEmpty == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((ConstraintLayout) rootView, rvOverview, tvEmpty);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
