@@ -64,7 +64,6 @@ id bLogin
 id bRegister
 id btAdd
 id categoryRecycle
-id clAddTodo
 id clLogin
 id clOverview
 id close_text
@@ -83,7 +82,6 @@ id fab
 id fabAdd
 id imageView
 id layout
-id mobile_navigation
 id more
 id nav_categories
 id nav_home
@@ -113,7 +111,6 @@ id tvLogin
 id tvLoginEmailLabel
 id tvLoginPasswordLabel
 id tvTitle
-id tvTtl
 id tvUserName
 id view_label
 layout activity_forgetpass
@@ -121,16 +118,12 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout add_category
-layout add_popup
 layout add_todo_activity
 layout app_bar_main
 layout categories_activity
 layout category_item
 layout content_main
-layout fragment_categories
 layout fragment_home
-layout fragment_notifications
-layout fragment_settings
 layout nav_header_main
 layout notification_item
 layout notifications_activity
@@ -143,7 +136,6 @@ menu main
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
-navigation mobile_navigation
 string action_settings
 string add_button
 string add_contacts_button

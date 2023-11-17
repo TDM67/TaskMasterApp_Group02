@@ -40,18 +40,6 @@
         "source": "com.example.taskmanager.app-main-46:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_categories.xml",
-        "source": "com.example.taskmanager.app-main-46:/layout/fragment_categories.xml"
-    },
-    {
-        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/add_popup.xml",
-        "source": "com.example.taskmanager.app-main-46:/layout/add_popup.xml"
-    },
-    {
-        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_notifications.xml",
-        "source": "com.example.taskmanager.app-main-46:/layout/fragment_notifications.xml"
-    },
-    {
         "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/activity_forgetpass.xml",
         "source": "com.example.taskmanager.app-main-46:/layout/activity_forgetpass.xml"
     },
@@ -62,10 +50,6 @@
     {
         "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/content_main.xml",
         "source": "com.example.taskmanager.app-main-46:/layout/content_main.xml"
-    },
-    {
-        "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/fragment_settings.xml",
-        "source": "com.example.taskmanager.app-main-46:/layout/fragment_settings.xml"
     },
     {
         "merged": "com.example.taskmanager.app-mergeDebugResources-43:/layout/categories_activity.xml",
