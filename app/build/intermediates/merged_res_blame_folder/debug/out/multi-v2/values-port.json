@@ -4,7 +4,7 @@
             "outputFile": "com.example.taskmanager.app-mergeDebugResources-42:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\S563087\\.gradle\\caches\\transforms-3\\636fe5f1319118333643bf6dca29e378\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\S560194\\.gradle\\caches\\transforms-3\\636fe5f1319118333643bf6dca29e378\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

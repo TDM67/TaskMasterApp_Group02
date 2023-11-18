@@ -64,6 +64,7 @@ id bLogin
 id bRegister
 id btAdd
 id categoryRecycle
+id checkbox
 id clLogin
 id clOverview
 id close_text

@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.taskmanager.models.Category;
 import com.example.taskmanager.models.Todo;
 import com.example.taskmanager.helpers.LocalDBHelper;
+import com.example.taskmanager.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,18 @@ public class LocalDBHelper extends SQLiteOpenHelper {
             + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + COL_CAT_NAME + " TEXT NOT NULL UNIQUE, "
             + COL_CAT_COUNT + " INTEGER, "+COL_CAT_COLOR +" TEXT)";
 
+    private static final String TABLE_USERS_NAME = "USERS";
+
+    public static final String COL_USER_ID = "ID";
+    public static final String COL_USER_NAME = "NAME";
+    public static final String COL_USER_EMAIL = "EMAIL";
+    public static final String COL_USER_PASSWORD = "PASSWORD";
+    public static final String COL_USER_CREATED = "CREATED";
+
+    private static final String QUERY_CREATE_USERS = "create table " + TABLE_USERS_NAME + "(" + COL_USER_ID
+            + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + COL_USER_NAME + " TEXT NOT NULL UNIQUE, "
+            + COL_USER_EMAIL + " TEXT, "+COL_USER_PASSWORD +" TEXT, "+ COL_USER_CREATED +" LONG )";
+
     public LocalDBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -47,6 +60,7 @@ public class LocalDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(QUERY_CREATE_TODOS);
         db.execSQL(QUERY_CREATE_CATEGORIES);
+        db.execSQL(QUERY_CREATE_USERS);
     }
 
     @Override
@@ -73,7 +87,6 @@ public class LocalDBHelper extends SQLiteOpenHelper {
         }
         return todos;
     }
-
 
     public Todo getTodoById(int id) {
         Todo todo = new Todo();
@@ -205,4 +218,21 @@ public class LocalDBHelper extends SQLiteOpenHelper {
         return this.getWritableDatabase().delete(TABLE_CATEGORY_NAME, COL_CAT_ID + " = ?", new String[]{String.valueOf(id)}) == 1;
     }
 
+    //----- USER --------
+
+    //Categories
+    public boolean insertUser(User user) {
+        return this.getWritableDatabase().insert(TABLE_USERS_NAME, null, user.toContentValues()) != -1;
+    }
+
+    public User getLogin(String email, String password) {
+        User user = new User();
+        Cursor result = this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_USERS_NAME
+                +" WHERE "+ COL_USER_EMAIL + "= '" + email +"' AND "+COL_USER_PASSWORD +"= '"+password+"' ", null);
+
+        while (result.moveToNext())
+            user = User.createFrom(result);
+
+        return user;
+    }
 }

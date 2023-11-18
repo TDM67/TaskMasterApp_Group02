@@ -7,10 +7,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.taskmanager.activities.MainActivity;
 import com.example.taskmanager.helpers.LocalDBHelper;
+import com.example.taskmanager.models.User;
 import com.google.android.material.snackbar.Snackbar;
 
 public class LoginActivity extends AppCompatActivity {
@@ -20,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button bLogin;
     private ProgressBar pbLogin;
     private TextView tvCreateAccount,tvForgetPass;
+    LocalDBHelper db = new LocalDBHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +51,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private void proceedLogin(String email, String password, View view){
         if(isValidEmailAddress() && isValidPassword()){
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            User user =db.getLogin(etEmail.getText().toString(), etPassword.getText().toString());
+            if(user.getName()!= null){
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }else{
+                Snackbar.make(view, "Invalid credentials!", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
             pbLogin.setVisibility(View.GONE);
         }
     }

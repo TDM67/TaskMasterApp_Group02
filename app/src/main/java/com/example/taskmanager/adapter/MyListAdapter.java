@@ -30,12 +30,10 @@ import java.util.List;
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyList> {
     List<Todo> list = Collections.emptyList();
     Context mContext;
-    
     public MyListAdapter(List<Todo> list, Context context){
         this.list = list;
         this.mContext = context;
     }
-
     @NonNull
     @Override
     public MyList onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -82,8 +80,10 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyList> {
             else if(item.getTitle().equals("Completed")){
                 //update status to completed || (done = true)
                 todo.setDone(true);
-
-                if(db.updateTodo(todo)) Toast.makeText(mContext, "Updated!", Toast.LENGTH_SHORT).show();
+                if(db.updateTodo(todo)){
+                    Toast.makeText(mContext, "Updated!", Toast.LENGTH_SHORT).show();
+                    mContext.startActivity(new Intent(mContext, MainActivity.class));
+                }
                 else Toast.makeText(mContext, "Failed!", Toast.LENGTH_SHORT).show();
 
             }

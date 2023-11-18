@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,6 +25,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
   @NonNull
   public final Button bRegister;
+
+  @NonNull
+  public final CheckBox checkbox;
 
   @NonNull
   public final ConstraintLayout clLogin;
@@ -53,12 +57,13 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final TextView tvUserName;
 
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull Button bRegister,
-      @NonNull ConstraintLayout clLogin, @NonNull EditText etLoginEmail,
+      @NonNull CheckBox checkbox, @NonNull ConstraintLayout clLogin, @NonNull EditText etLoginEmail,
       @NonNull EditText etLoginPassword, @NonNull EditText etRegister, @NonNull ProgressBar pbLogin,
       @NonNull TextView tvLogin, @NonNull TextView tvLoginEmailLabel,
       @NonNull TextView tvLoginPasswordLabel, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.bRegister = bRegister;
+    this.checkbox = checkbox;
     this.clLogin = clLogin;
     this.etLoginEmail = etLoginEmail;
     this.etLoginPassword = etLoginPassword;
@@ -100,6 +105,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
       id = R.id.bRegister;
       Button bRegister = ViewBindings.findChildViewById(rootView, id);
       if (bRegister == null) {
+        break missingId;
+      }
+
+      id = R.id.checkbox;
+      CheckBox checkbox = ViewBindings.findChildViewById(rootView, id);
+      if (checkbox == null) {
         break missingId;
       }
 
@@ -153,7 +164,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ConstraintLayout) rootView, bRegister, clLogin,
+      return new ActivityRegisterBinding((ConstraintLayout) rootView, bRegister, checkbox, clLogin,
           etLoginEmail, etLoginPassword, etRegister, pbLogin, tvLogin, tvLoginEmailLabel,
           tvLoginPasswordLabel, tvUserName);
     }

@@ -50,10 +50,9 @@
             android:layout_height="46dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:hint="eg: Alexander"
-            android:inputType="text"
+            android:hint="eg: Work"
+            android:inputType="textPersonName"
             android:textAllCaps="true"
-            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
             android:paddingLeft="20dp" />
 
         <Button

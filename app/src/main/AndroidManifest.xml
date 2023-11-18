@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TaskManager"
         tools:targetApi="31">
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TaskManager.NoActionBar">
@@ -31,15 +31,15 @@
             android:theme="@style/Theme.TaskManager.NoActionBar"
             />
         <activity
-            android:name=".LoginActivity"
-            android:theme="@style/Theme.TaskManager.NoActionBar"/>
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.TaskManager.NoActionBar"
+            />
         <activity
             android:name=".activities.AddToDoActivity"
             android:theme="@style/Theme.TaskManager"/>
         <activity
             android:name=".activities.CategoriesActivity"
             android:theme="@style/Theme.TaskManager"/>
-
         <activity
             android:name=".activities.NotificationsActivity"
             android:theme="@style/Theme.TaskManager"/>
