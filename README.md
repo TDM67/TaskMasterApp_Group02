@@ -35,4 +35,42 @@ Interact with tasks within a category - view, modify details, or delete.
 Manage categories effectively - view, modify, clear tasks, or delete entire categories.
 
 The notifications which help to go in flow of the tasks to be performed.
- The above is the information which helps smooth flow of our Task Master Application.
+ The above is the information which helps smooth flow of our Task Master Application with sample test data.
+
+ 
+##### Tarun Deep 
+My commits:
+Created the project with design pages.
+Created the navigations and notifications design.
+Implemented the functionality of forgot password, Notification and To Do activity Category menu selection by Pravallika, Me
+Created the apk and tested in the mobile application by me, Pravallika
+
+
+##### Naveen Manne
+My commits: 
+created the task title and category
+created the design for login, register and forgot password design.
+Added the categories, Notification, category items and task selection by Me, SriLakshmi
+Tested the application.
+
+##### SriLakshmi
+My Commits:
+Created the design for the homepage, Task Manager, Category selection.
+Created the DashBoard, Side Navigation and log out functionality.
+Implemented the functionality of login and forgot password by Me, Naveen Manne
+Tested the application
+
+##### Pravallika
+My commits:
+Created the design for edit and delete button in the task Master application.
+Created the design for task manager menu category
+implemented the functionality of add category, categories menu, task item by Tarun, Me
+Created the apk and tested in the mobile application by me, Tarun
+
+
+
+
+
+
+
+
